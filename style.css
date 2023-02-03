@@ -1,0 +1,142 @@
+:root {
+  --StrongCyan: hsl(172, 67%, 45%);
+  --VeryDarkCyan: hsl(183, 100%, 15%);
+  --DarkGrayishCyan: hsl(186, 14%, 43%);
+  --GrayishCyan: hsl(184, 14%, 56%);
+  --LightGrayishCyan: hsl(185, 41%, 84%);
+  --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+}
+* {
+  font-family: "Space Mono", monospace;
+}
+body {
+  background-color: var(--LightGrayishCyan);
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+header {
+  text-align: center;
+  margin: 50px auto;
+}
+header,
+.split-container {
+  width: 70%;
+}
+.split-container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  gap: 20px;
+}
+.bill-container,
+.total-container {
+  padding: 20px;
+}
+/* input */
+.split-P {
+  color: var(--GrayishCyan);
+  margin-bottom: 5px;
+}
+.receive-num {
+  background-color: var(--VeryLightGrayishCyan);
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+.receive-num img {
+  height: 15px;
+  padding: 0 10px;
+  width: auto;
+}
+.receive-num .num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: end;
+  background-color: var(--VeryLightGrayishCyan);
+  border: none;
+  width: 100%;
+}
+/* buttons */
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.custom-btn {
+  height: 50px;
+  width: 130px;
+  margin: 10px 5px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: var(--VeryDarkCyan);
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--StrongCyan);
+  color: var(--VeryDarkCyan);
+}
+.custom {
+  background-color: var(--VeryLightGrayishCyan);
+  color: var(--VeryDarkCyan);
+  text-align: end;
+}
+.custom::placeholder {
+  text-align: center;
+}
+/* total container */
+.total-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  background-color: var(--VeryDarkCyan);
+  border-radius: 20px;
+  padding: 30px 50px;
+}
+.amount {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.amount p {
+  color: white;
+}
+.special {
+  color: var(--GrayishCyan);
+}
+.totalTips,
+.totalPerson {
+  color: var(--StrongCyan);
+  font-size: 3.5rem;
+}
+.total-container button {
+  font-size: 1.5rem;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  color: var(--VeryDarkCyan);
+  background-color: var(--StrongCyan);
+  cursor: pointer;
+}
+.total-container button:hover {
+  background-color: var(--LightGrayishCyan);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
