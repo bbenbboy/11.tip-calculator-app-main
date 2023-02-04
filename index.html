@@ -39,13 +39,16 @@
       <header>
         <img src="/images/logo.svg" alt="" />
       </header>
-      <section class="split-container">
+      <form class="split-container">
         <div class="bill-container">
           <div class="bill">
-            <p class="split-P">Bill</p>
+            <div class="error-message">
+              <label class="split-P">Bill</label>
+              <p class="error">Can't be empty</p>
+            </div>
             <div class="receive-num">
               <img src="/images/icon-dollar.svg" alt="" />
-              <input type="number" class="num" id="num" required />
+              <input type="number" class="numBill" id="num" required />
             </div>
           </div>
 
@@ -60,17 +63,19 @@
               <input
                 type="number"
                 class="custom custom-btn"
-                id="customer"
+                id="customTip"
                 placeholder="Custom"
-                required
               />
             </div>
           </div>
           <div class="people-container">
-            <p class="split-P">Number of People</p>
+            <div class="error-message">
+              <label class="split-P">Number of People</label>
+              <p class="error">Can't be zero</p>
+            </div>
             <div class="receive-num">
               <img src="/images/icon-person.svg" alt="" />
-              <input type="number" class="num" id="num" />
+              <input type="number" class="numPeople" id="num" required />
             </div>
           </div>
         </div>
@@ -97,7 +102,7 @@
           </div>
           <button type="reset">RESET</button>
         </div>
-      </section>
+      </form>
       <footer>
         <div class="attribution">
           Challenge by

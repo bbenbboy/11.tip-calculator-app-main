@@ -56,13 +56,30 @@ header,
   padding: 0 10px;
   width: auto;
 }
-.receive-num .num {
+.receive-num .numBill,
+.receive-num .numPeople {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: end;
   background-color: var(--VeryLightGrayishCyan);
   border: none;
   width: 100%;
+}
+.error-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error.active {
+  color: red;
+  visibility: visible;
+}
+.receive-num.active {
+  border: 2px solid red !important;
+  visibility: visible;
+}
+.error {
+  visibility: hidden;
 }
 /* buttons */
 .btn-container {

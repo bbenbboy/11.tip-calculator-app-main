@@ -1,13 +1,22 @@
 "use strict";
+const form = document.querySelector("form");
+const inputs = form.querySelectorAll("input");
+const borderError = form.querySelector(".receive-num");
+const textError = form.querySelectorAll(".error");
 
-function split(num, people, tips, custom) {
-  let amountPerson = num / people;
-  let tipsPerson = (amountPerson * tips).toFixed(2);
-  let tipsPersonInt = tipsPerson / 1;
-  let sumAmount = Math.floor(amountPerson + tipsPersonInt).toFixed(2);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
-  console.log(amountPerson);
-  console.log(tipsPerson);
-  console.log(sumAmount);
+function validateInput(input) {
+  if (input.value === "") {
+    textError.classList.add("active");
+    borderError.classList.add("active");
+    return false;
+  } else {
+    textError.classList.remove("active");
+    borderError.classList.remove("active");
+    return true;
+  }
 }
-split(142.55, 5, 0.15);
+validateInput(inputs);
